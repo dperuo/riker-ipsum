@@ -1,5 +1,5 @@
 var pbcopy = require('child_process').spawn('pbcopy');
-var quotes = QuotesArray();
+var quotes = getQuotesArray();
 var length = quotes.length;
 var i      = Math.floor(Math.random() * length);
 var quote  = quotes[i];
@@ -17,7 +17,7 @@ function copy(data) {
 
 
 // From http://www.rikeripsum.com/
-function QuotesArray () {
+function getQuotesArray () {
   var array = [
     "A lot of things can change in twelve years, Admiral.",
     "A surprise party? Mr. Worf, I hate surprise parties. I would *never* do that to you.",
