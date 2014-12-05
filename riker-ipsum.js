@@ -1,22 +1,39 @@
-var pbcopy = require('child_process').spawn('pbcopy');
+/*
+ * riker-ipsum.js
+ *
+ * Derek Peruo <http://github.com/dperuo/riker-ipsum>
+ *
+ */
+
+
+// node modules
+var os   = require("os");
+var proc = require("child_process").spawn((os.platform() === "darwin") ? "pbcopy" : "clip");
+
+// script variables
 var quotes = getQuotesArray();
-var length = quotes.length;
-var i      = Math.floor(Math.random() * length);
+var l      = quotes.length;
+var i      = Math.floor(Math.random() * l);
 var quote  = quotes[i];
 
 
+// execute
 copy(quote);
 console.log(quote);
 
 
-// From http://stackoverflow.com/questions/7778539/copy-to-clipboard-in-nodejs
+// functions
+
+// copy quote to system clipboard
+// from <http://stackoverflow.com/questions/7778539/copy-to-clipboard-in-nodejs>
 function copy(data) {
-  pbcopy.stdin.write(data);
-  pbcopy.stdin.end();
+  proc.stdin.write(data);
+  proc.stdin.end();
 }
 
 
-// From http://www.rikeripsum.com/
+// populate quote array
+// quotes from http://www.rikeripsum.com/
 function getQuotesArray () {
   var array = [
     "A lot of things can change in twelve years, Admiral.",
