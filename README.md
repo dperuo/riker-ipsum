@@ -1,4 +1,4 @@
 riker-ipsum
 ===========
 
-A Node.js implementation of RikerIpsum.com. Your quote is copied directly to the clipboard.
+Node.js and Ruby implementations of RikerIpsum.com. Your quote is copied directly to the clipboard.
