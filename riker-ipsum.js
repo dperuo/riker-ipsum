@@ -6,15 +6,15 @@
  */
 
 
-// node modules
-var os   = require("os");
-var proc = require("child_process").spawn((os.platform() === "darwin") ? "pbcopy" : "clip");
+var os        = require("os");
+var isOSX     = os.platform() === "darwin";
+var clipboard = isOSX ? "pbcopy" : "clip";
+var proc      = require("child_process").spawn(clipboard);
 
-// script variables
-var quotes = getQuotesArray();
-var l      = quotes.length;
-var i      = Math.floor(Math.random() * l);
-var quote  = quotes[i];
+var quotes    = getQuotesArray();
+var l         = quotes.length;
+var i         = Math.floor(Math.random() * l);
+var quote     = quotes[i];
 
 
 // execute
