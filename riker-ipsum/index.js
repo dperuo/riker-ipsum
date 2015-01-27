@@ -3,6 +3,7 @@ var os        = require("os");
 var isOSX     = os.platform() === "darwin";
 var clipboard = isOSX ? "pbcopy" : "clip";
 var proc      = require("child_process").spawn(clipboard);
+var args      = process.argv.slice(2);
 
 var quotes = require('./_riker-ipsum').getQuotes();
 var i      = randomNumber(quotes);
