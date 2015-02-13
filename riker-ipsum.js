@@ -6,35 +6,75 @@
  */
 
 
- var os        = require("os");
- var isOSX     = os.platform() === "darwin";
- var clipboard = isOSX ? "pbcopy" : "clip";
- var proc      = require("child_process").spawn(clipboard);
- var args      = process.argv.slice(2);
+var os        = require("os");
+var isOSX     = os.platform() === "darwin";
+var clipboard = isOSX ? "pbcopy" : "clip";
+var proc      = require("child_process").spawn(clipboard);
+var args      = process.argv.slice(2);
 
- var quotes = getQuotesArray();
- var i      = getRandomIndex(quotes);
- var quote  = quotes[i];
+getQuote(args);
 
-
- // Execute
-copy(quote);
-console.log(quote);
 
 
 
 
 /**
- * copy()
- * Copies the selected quote to the system clipboard.
+ * getQuote()
+ * Copies the selected quote to the system clipboard and the console.
  *
- * @param {string} data - The data sent to the system keyboard
+ * @param {number} max - Max word length for quote.
  */
 
-function copy(data) {
-  proc.stdin.write(data);
+function getQuote (max) {
+
+  var _quotes = getQuotesArray();
+  var i       = getRandomIndex(_quotes);
+  var quote   = _quotes[i];
+
+  if (max.length) {
+    testQuote(quote, max);
+  } else {
+    print(quote);
+  }
+}
+
+
+
+/**
+ * testQuote()
+ * Compares the current quote with the specificed max word count.
+ *
+ * @param {string} quote - The quote to test.
+ * @param {number} max - Max word length for quote.
+ */
+
+function testQuote (quote, max) {
+  var _wordArray = quote.split(' ');
+
+  if (_wordArray.length <= max) {
+    print(quote);
+  }
+
+  if (_wordArray.length > max) {
+    getQuote(max);
+  }
+}
+
+
+
+/**
+ * print()
+ * Copies the selected quote to the system clipboard and the console.
+ *
+ * @param {string} quote - The quote sent to the system keyboard
+ */
+
+function print (quote) {
+  console.log(quote);
+  proc.stdin.write(quote);
   proc.stdin.end();
 }
+
 
 
 /**
@@ -146,7 +186,7 @@ function getQuotesArray () {
     "You're going to be an interesting companion, Mr. Data.",
     "Your head is not an artifact!",
     "Your shields were failing, sir."
-    ];
+  ];
 
   return quotesArray;
 }
