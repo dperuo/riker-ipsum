@@ -1,5 +1,107 @@
-module.exports = function getQuotes () {
-  var array = [
+/*
+ * riker-ipsum.js
+ *
+ * Derek Peruo <http://github.com/dperuo/riker-ipsum>
+ *
+ */
+
+
+var os        = require("os");
+var isOSX     = os.platform() === "darwin";
+var clipboard = isOSX ? "pbcopy" : "clip";
+var proc      = require("child_process").spawn(clipboard);
+var args      = process.argv.slice(2);
+
+getQuote(args);
+
+
+
+
+
+/**
+ * getQuote()
+ * Copies the selected quote to the system clipboard and the console.
+ *
+ * @param {number} max - Max word length for quote.
+ */
+
+function getQuote(max) {
+
+  var _quotes = getQuotesArray();
+  var i       = getRandomIndex(_quotes);
+  var quote   = _quotes[i];
+
+  if (max.length) {
+    testQuote(quote, max);
+  } else {
+    print(quote);
+  }
+}
+
+
+
+/**
+ * testQuote()
+ * Compares the current quote with the specificed max word count.
+ *
+ * @param {string} quote - The quote to test.
+ * @param {number} max - Max word length for quote.
+ */
+
+function testQuote(quote, max) {
+  var _wordArray = quote.split(' ');
+
+  if (_wordArray.length <= max) {
+    print(quote);
+  }
+
+  if (_wordArray.length > max) {
+    getQuote(max);
+  }
+}
+
+
+
+/**
+ * print()
+ * Copies the selected quote to the system clipboard and the console.
+ *
+ * @param {string} quote - The quote sent to the system keyboard
+ */
+
+function print(quote) {
+  console.log(quote);
+  proc.stdin.write(quote);
+  proc.stdin.end();
+}
+
+
+
+/**
+ * getRandomIndex()
+ * Returns a random index based on the array length.
+ *
+ * @params {Array} array - The array of values.
+ * @returns {number} rand - The random index.
+ */
+
+function getRandomIndex(array) {var _array = array || [];
+  var _len = _array.length;
+  var rand = Math.floor(Math.random() * _len);
+
+  return rand;
+}
+
+
+/**
+ * getQuotesArray()
+ * Returns an array of Riker Quotes. Quotes are from http://www.rikeripsum.com/
+ *
+ * @returns {Array} quotesArray - The array of quotes.
+ */
+
+function getQuotesArray() {
+  var quotesArray = [
     "A lot of things can change in twelve years, Admiral.",
     "A surprise party? Mr. Worf, I hate surprise parties. I would *never* do that to you.",
     "About four years. I got tired of hearing how young I looked.",
@@ -83,7 +185,8 @@ module.exports = function getQuotes () {
     "You enjoyed that.",
     "You're going to be an interesting companion, Mr. Data.",
     "Your head is not an artifact!",
-    "Your shields were failing, sir.",
+    "Your shields were failing, sir."
   ];
-  return array;
+
+  return quotesArray;
 }
