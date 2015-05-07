@@ -5,8 +5,7 @@ var proc      = require("child_process").spawn(clipboard);
 var args      = process.argv.slice(2);
 
 var quotes = require('./riker-quotes');
-var i      = getRandomIndex(quotes);
-var quote  = quotes[i];
+var quote  = getQuote(quotes);
 
 
 // Execute
@@ -24,6 +23,20 @@ console.log(quote);
 function copy(data) {
   proc.stdin.write(data);
   proc.stdin.end();
+}
+
+/**
+ * getQuote()
+ * Does amazing stuff here
+ *
+ * @params {Array} array - The array of quotes.
+ *
+ * @returns {string} quote - The random quote.
+ */
+
+function getQuote(array) {
+  var i = getRandomIndex(array);
+  return array[i];
 }
 
 /**
