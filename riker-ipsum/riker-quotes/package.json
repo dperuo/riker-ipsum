@@ -1,7 +1,7 @@
 {
-  "name": "riker-ipsum",
+  "name": "riker-quotes",
   "version": "0.2.0",
-  "description": "Node implementations of RikerIpsum.com. Your quote is copied directly to the clipboard.",
+  "description": "The array of quotes used by riker-ipsum",
   "main": "index.js",
   "author": "Derek Peruo <derek@derekperuo.net>",
   "license": "MIT",
