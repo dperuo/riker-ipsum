@@ -10,7 +10,7 @@ var quote  = getQuote(quotes);
 
 // Execute
 copy(quote);
-console.log(quote);
+console.log('\x1b[32m----->', quote);
 
 
 /**
