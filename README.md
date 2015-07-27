@@ -3,7 +3,7 @@
 riker-ipsum
 ===========
 
-Command line implementations of [RikerIpsum.com][ri] using Node.js. Your quote is copied directly to the clipboard.
+Command line implementations of [RikerIpsum.com][ri] using Node.js. Your Riker quote is copied directly to the clipboard.
 
 ## Install
 From the command line:
