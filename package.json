@@ -1,8 +1,13 @@
 {
   "name": "riker-ipsum",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Node implementations of RikerIpsum.com. Your quote is copied directly to the clipboard.",
-  "keywords": [ "star trek", "will riker", "lorem ipsum", "dummy text" ],
+  "keywords": [
+    "star trek",
+    "will riker",
+    "lorem ipsum",
+    "dummy text"
+  ],
   "bugs": {
     "url": "https://github.com/dperuo/riker-ipsum/issues"
   },
