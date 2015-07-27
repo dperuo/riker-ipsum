@@ -27,7 +27,7 @@ function copy(data) {
 
 /**
  * getQuote()
- * Does amazing stuff here
+ * get a random quote from the quote array
  *
  * @params {Array} array - The array of quotes.
  *
@@ -44,6 +44,7 @@ function getQuote(array) {
  * Returns a random index based on the array length.
  *
  * @params {Array} array - The array of values.
+ *
  * @returns {number} rand - The random index.
  */
 
@@ -54,5 +55,3 @@ function getRandomIndex(array) {
 
   return rand;
 }
-
-
