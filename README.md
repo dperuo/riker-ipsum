@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/riker-ipsum.svg)](http://badge.fury.io/js/riker-ipsum)
+
 riker-ipsum
 ===========
 
