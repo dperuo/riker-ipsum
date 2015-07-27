@@ -4,6 +4,5 @@
   "description": "Node implementations of RikerIpsum.com. Your quote is copied directly to the clipboard.",
   "main": "index.js",
   "author": "Derek Peruo <derek@derekperuo.net>",
-  "license": "MIT",
-  "private": true
+  "license": "MIT"
 }

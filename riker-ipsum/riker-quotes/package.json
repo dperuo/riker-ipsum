@@ -1,9 +1,8 @@
 {
   "name": "riker-quotes",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "The array of quotes used by riker-ipsum",
   "main": "index.js",
   "author": "Derek Peruo <derek@derekperuo.net>",
-  "license": "MIT",
-  "private": true
+  "license": "MIT"
 }
