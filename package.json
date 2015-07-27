@@ -1,6 +1,6 @@
 {
   "name": "riker-ipsum",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node implementations of RikerIpsum.com. Your quote is copied directly to the clipboard.",
   "main": "index.js",
   "author": "Derek Peruo <derek@derekperuo.net>",
