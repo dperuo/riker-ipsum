@@ -1,7 +1,0 @@
-rikeripsum.maxChars(23);
-
-rikeripsum.minChars(12);
-
-rikeripsum.maxWords(3);
-
-rikeripsum.minWords(4);
