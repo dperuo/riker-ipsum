@@ -1,6 +1,6 @@
 {
   "name": "riker-ipsum",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Node implementations of RikerIpsum.com. Your Riker quote is copied directly to the clipboard.",
   "keywords": [
     "star-trek",
