@@ -2,8 +2,15 @@
   "name": "riker-ipsum",
   "version": "1.0.3",
   "description": "Node implementations of RikerIpsum.com. Your quote is copied directly to the clipboard.",
+  "keywords": [ "star trek", "will riker", "lorem ipsum", "dummy text" ],
+  "bugs": {
+    "url": "https://github.com/dperuo/riker-ipsum/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dperuo/riker-ipsum.git"
+  },
   "main": "index.js",
   "author": "Derek Peruo <derek@derekperuo.net>",
-  "license": "MIT",
-  "readme": "README.md"
+  "license": "MIT"
 }
