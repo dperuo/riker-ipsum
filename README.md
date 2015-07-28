@@ -1,5 +1,7 @@
 [![npm version](https://badge.fury.io/js/riker-ipsum.svg)](http://badge.fury.io/js/riker-ipsum)
 
+[![Build Status](https://travis-ci.org/dperuo/riker-ipsum.svg?branch=master)](https://travis-ci.org/dperuo/riker-ipsum)
+
 riker-ipsum
 ===========
 
