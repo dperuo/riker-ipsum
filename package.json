@@ -19,6 +19,6 @@
   "author": "Derek Peruo <derek@derekperuo.net>",
   "license": "MIT",
   "scripts": {
-    "test": "node ./index.js"
+    "test": "node ./index.js && exit 0"
   }
 }
