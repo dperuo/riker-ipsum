@@ -19,6 +19,6 @@
   "author": "Derek Peruo <derek@derekperuo.net>",
   "license": "MIT",
   "scripts": {
-    "test": "pwd"
+    "test": "node ./index.js"
   }
 }
