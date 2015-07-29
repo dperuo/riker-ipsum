@@ -9,6 +9,3 @@ node_js:
   - "iojs-v1.0.4"
 notifications:
   email: false
-os:
-  - linux
-  - osx
