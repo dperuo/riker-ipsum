@@ -1,6 +1,6 @@
-[![npm version](https://badge.fury.io/js/riker-ipsum.svg)](http://badge.fury.io/js/riker-ipsum)
-
-[![Build Status](https://travis-ci.org/dperuo/riker-ipsum.svg?branch=master)](https://travis-ci.org/dperuo/riker-ipsum)
+| Travis CI | npm |
+| :-: | :-: |
+| [![Build Status](https://travis-ci.org/dperuo/riker-ipsum.svg?branch=master)](https://travis-ci.org/dperuo/riker-ipsum) | [![npm version](https://badge.fury.io/js/riker-ipsum.svg)](http://badge.fury.io/js/riker-ipsum) |
 
 riker-ipsum
 ===========
