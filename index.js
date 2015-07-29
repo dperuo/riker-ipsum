@@ -9,6 +9,7 @@ var quote  = getQuote(quotes);
 
 
 // Execute
+console.log('@@@', os.platform());
 copy(quote);
 console.log('\x1b[32m', quote);
 
