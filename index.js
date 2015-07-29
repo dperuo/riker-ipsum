@@ -1,6 +1,5 @@
 var os        = require("os");
-var isOSX     = (os.platform() === "darwin");
-var clipboard = isOSX ? "pbcopy" : "clip";
+var clipboard = setClipboard(os.platform());
 var proc      = require("child_process").spawn(clipboard);
 var args      = process.argv.slice(2);
 
@@ -8,11 +7,10 @@ var quotes = require('./riker-quotes');
 var quote  = getQuote(quotes);
 
 
+
 // Execute
-console.log('@@@', os.platform());
 copy(quote);
 console.log('\x1b[32m', quote);
-
 
 /**
  * copy()
@@ -56,3 +54,22 @@ function getRandomIndex(array) {
 
   return rand;
 }
+
+/**
+ * setClipboard()
+ * set the system clipboard
+ *
+ * @param {string} platform - the platform from os.platform()
+ *
+ * @returns {string} - the correct clipboard for the platform
+ */
+
+function setClipboard(platform) {
+   var clipboards = {
+     darwin: "pbcopy",
+     linux: "xclip",
+     windows: "clip",
+   };
+
+   return clipboards[platform];
+ }
