@@ -17,6 +17,7 @@
   },
   "main": "index.js",
   "bin": "./index.js",
+  "preferGlobal": "true",
   "author": "Derek Peruo <derek@derekperuo.net>",
   "license": "MIT",
   "scripts": {
