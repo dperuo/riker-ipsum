@@ -16,6 +16,7 @@
     "url": "https://github.com/dperuo/riker-ipsum.git"
   },
   "main": "index.js",
+  "bin": "./index.js",
   "author": "Derek Peruo <derek@derekperuo.net>",
   "license": "MIT",
   "scripts": {
