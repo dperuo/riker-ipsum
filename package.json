@@ -22,6 +22,6 @@
   "author": "Derek Peruo <derek@derekperuo.net>",
   "license": "MIT",
   "scripts": {
-    "test": "riker-ipsum"
+    "test": "npm install -g riker-ipsum && riker-ipsum"
   }
 }
