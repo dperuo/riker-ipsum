@@ -5,6 +5,8 @@ var clipboard = setClipboard(os.platform());
 var proc      = require("child_process").spawn(clipboard);
 var args      = process.argv.slice(2);
 
+var isReal = (args.indexOf('--test') === -1);
+
 var quotes = require('./riker-quotes');
 var quote  = getQuote(quotes);
 
@@ -22,7 +24,11 @@ console.log('\x1b[32m', quote);
  */
 
 function copy(data) {
-  proc.stdin.write(data);
+
+  if (isReal) {
+    proc.stdin.write(data);
+  }
+
   proc.stdin.end();
 }
 
