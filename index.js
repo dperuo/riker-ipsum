@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 var os        = require("os");
 var clipboard = setClipboard(os.platform());
 var proc      = require("child_process").spawn(clipboard);

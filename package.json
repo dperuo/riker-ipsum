@@ -15,12 +15,13 @@
     "type": "git",
     "url": "https://github.com/dperuo/riker-ipsum.git"
   },
-  "main": "index.js",
-  "bin": "./index.js",
+  "bin": {
+    "riker-ipsum": "index.js"
+    },
   "preferGlobal": "true",
   "author": "Derek Peruo <derek@derekperuo.net>",
   "license": "MIT",
   "scripts": {
-    "test": "pwd"
+    "test": "riker-ipsum"
   }
 }
