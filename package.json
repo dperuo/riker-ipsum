@@ -1,6 +1,6 @@
 {
   "name": "riker-ipsum",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Node implementations of RikerIpsum.com. Your Riker quote is copied directly to the clipboard.",
   "keywords": [
     "star-trek",
@@ -17,7 +17,7 @@
   },
   "bin": {
     "riker-ipsum": "index.js"
-    },
+  },
   "preferGlobal": "true",
   "author": "Derek Peruo <derek@derekperuo.net>",
   "license": "MIT",
