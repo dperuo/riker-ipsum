@@ -16,7 +16,7 @@
     "url": "https://github.com/dperuo/riker-ipsum.git"
   },
   "bin": {
-    "riker-ipsum": "index.js"
+    "riksum": "index.js"
   },
   "preferGlobal": "true",
   "author": "Derek Peruo <derek@derekperuo.net>",
